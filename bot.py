@@ -3,10 +3,12 @@ import json
 import time
 import urllib.request
 import requests
+import os 
 
 # ==== CONFIGURATION ====
-BOT_TOKEN = "8062273828:AAEJ5qaWqFAAVm28s1ikgY4J47gi_Quwhwo"  #  Telegram bot token
-OPENROUTER_API_KEY = "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"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+
 MODEL_NAME = "gpt-4o-mini"
 
 API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/"
